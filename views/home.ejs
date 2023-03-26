@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p><%= startingContentKey %></p>
+<% posts.forEach(function (dayPost) { %>
+    <h1><%= dayPost.firstText %></h1>
+    <p>
+        <%= dayPost.secondText.substring(0, 100) + " ..." %> 
+        <a href="/posts/<%= dayPost.firstText %>">Read More</a>
+    </p>
+<% }); %>
+
+<%- include("partials/footer"); -%>
+
